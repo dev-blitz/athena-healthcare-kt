@@ -1,2 +1,2 @@
-# athena-kt
-Knowledge Transfer from Athena for the US Healthcare Systems and about the work they do.
+# athena-healthcare-kt
+Knowledge Transfer from ***Athena Healthcare*** about the ***US Healthcare Systems*** and about the work they do.
