@@ -1,4 +1,4 @@
-# Batch Process and Batch File:
+# Batch Process and Batch Files:
 
 ⭐First a ***Claim*** will be submitted with following details:
 
