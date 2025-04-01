@@ -13,6 +13,8 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
 ⭐ **Trigger Point for Import [1.0]:**
 
     method called CreateFile, line: 1565
+    ![image](https://github.com/user-attachments/assets/84d12ed4-f21e-49b9-90be-b018630a2820)
+
 
 ⭐ **Trigger Point for Import [2.0]:**
 
