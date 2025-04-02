@@ -43,10 +43,10 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
 
 ### Inside **createFile**
 
-    * we will first check the *ANSI-version*
-        + inside **ANSI-835** we are supporting 2 versions:
-            + 4010
-            + 5010
+* we will first check the *ANSI-version*
+    + inside **ANSI-835** we are supporting 2 versions:
+        + 4010
+        + 5010
 
 
 
