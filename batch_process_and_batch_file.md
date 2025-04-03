@@ -15,7 +15,7 @@
 patient is getting treated for.
 
 ⭐There are another type of Codes:
- CPD Codes (Procedure Code)
+ `CPD` Codes & `Procedure` Codes
 
 ⭐**2 things will received from the payers (Insurence Company):**
 
