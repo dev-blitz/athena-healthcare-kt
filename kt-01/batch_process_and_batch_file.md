@@ -53,36 +53,35 @@ patient is getting treated for.
 
 ## **ANSI-835** *files structure breakdown*
 
- 1. Always a File will start with `ISA`
- 2. The file will end with `IEA`
- 3. `GS` & `GR` represent groups.
- 4. `BPR` represents a Batch:
+1. Always a File will start with `ISA`
+2. The file will end with `IEA`
+3. `GS` & `GR` represent groups.
+4. `BPR` represents a Batch:
    `Batch` will have a group of `Claims`.
    The `Claims` will have a group of `Charges`.
    All these are paid together.
- 5. `BPR` represents an Entity of a `Payment`:
+5. `BPR` represents an Entity of a `Payment`:
    It can be ***CHK*** (Cheque Payment) or ***ACH*** (Automated Clearing House) Payment.
- 6. Threre can be multiple *BPR* (Batched) in a File.
- 7. Each Batch will have a group of Charges inside them.
- 8. `BPR` contains all the Claims till we get a next BPR.
- 9. `CLP` represents Claim:
-  Until we get another CLP (Claim), the details entered refers to the first Claim.
- 10. `NM1` specifies some information about the claim:
-   if *NM1* has *QC*, then it represents a `Patient`.
-   *NM1* with *82* represents the `Doctor`.
- 11. `SVC` represents *Amount* each and every procedure for the claim that was taken.
+6. Threre can be multiple *BPR* (Batched) in a File.
+7. Each Batch will have a group of Charges inside them.
+8. `BPR` attribute contains all the Claims till we get a next BPR.
+9. `CLP` represents Claim:
+  Until we get another **CLP** (*Claim*), the details entered refers to the first Claim.
+10. `NM1` specifies some information about the claim:
+   if `NM1` has *QC*, then it represents a `Patient`.
+   `NM1` with *82* represents the `Doctor`.
+11. `SVC` represents *Amount* each and every procedure for the claim that was taken.
   `SVC` represents Service Level Charges.
    `SVC` will contain the `Procedure Code` after '*'.
- 12. *CAS* represents the `Kick Codes` with the `Kick Amount`.
-  *CO*, *OA* are kick codes.
- 13. *PLB*:
-   The `Batch` amount may not be always equal to the umber of total amounts, there can be some additional amount paid or some amount may be reduced.
-   Any payment which is not specific to the number of claims will come as PLBs, which we are calling as Batch Exceptions.
-
-   These contain `Reason Codes` like WU, L6 which are used to find out the reason.
+12. `CAS` represents the `Kick Codes` with the `Kick Amount`.
+    * *CO*, *OA* are kick codes.
+13. `PLB`:
+    * The `Batch` amount may not be always equal to the umber of total amounts, there can be some additional amount paid or some amount may be reduced.
+    * Any payment which is not specific to the number of claims will come as PLBs, which we are calling as Batch Exceptions.
+    * These contain `Reason Codes` like WU, L6 which are used to find out the reason.
 
 ## **`SUMMARY`**
 
-***Batch*** can have *group of **Claims [CLP]***, Each Claim will have *group of **Charges***. Other than Claims, it can also contain **Batch Exceptions [PLB]**.
+***Batch*** can have *group of **Claims `CLP`***, Each Claim will have *group of **Charges***. Other than Claims, it can also contain **Batch Exceptions `PLB`**.
 
 ***Batch*** will *start with* **[ISA]** and *end with* **[IEA]**

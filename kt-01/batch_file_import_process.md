@@ -6,9 +6,8 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
 
 ## **EMCRECIEVERID** [*EMC Receiver ID*]
 
-    Each Interface connection will have an ID, this is called as **EMC RECIEVER ID**.
-    
-    This is one of the main Indicator that we have received a *Remittance File*
+* Each Interface connection will have an ID, this is called as **EMC RECIEVER ID**.
+* This is one of the main Indicator that we have received a *Remittance File*
      from the *Payer (Insurance Company.)*
 
 ## **Trigger Point for Import [1.0]**
