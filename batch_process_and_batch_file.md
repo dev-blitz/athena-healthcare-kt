@@ -1,42 +1,44 @@
 # Remittance Batch File [ANSI-835] Components and Batch Process
 
-⭐First a `Claim` will be submitted with following details:
+1. First a `Claim` will be submitted with following details:
 
-* Illness
-* Procedure they took to cope with the Illness(Procedure Code)
-* Amount
+    1. Illness
+    2. Procedure they took to cope with the Illness(Procedure Code)
+    3. Amount
 
-⭐For Each Illness we have `ICD` codes (Disease Code):
+2. For Each Illness we have `ICD` codes (Disease Code):
+    * ICD-9
+    * ICD-10
 
-* ICD-9
-* ICD-10
-
-⭐These Codes are called as ***Procedure*** codes. *This code will represent the type of Illness the*
+3. These Codes are called as ***Procedure*** codes. *This code will represent the type of Illness the*
 patient is getting treated for.
 
-⭐There are another type of Codes:
- `CPD` Codes & `Procedure` Codes
+4. There are another type of Codes:
+ CPD Codes (Procedure Code)
 
-⭐**2 things will received from the payers (Insurence Company):**
+5. **2 things will received from the payers (Insurence Company):**
 
- 1. Actual Amount
- 2. Explanation for each and every *Claim*(List of ICD Codes and Procedure Code)
+   1. Actual Amount
+   2. Explanation for each and every *Claim*(List of ICD Codes and Procedure Code)
 
-⭐***Remittance***:
- *It is the Explanation from the Insurance Company once they have paid the Claim or Group of Claims.*
+## ***Remittance***
 
-⭐*Claim* will have all the *details*:
+   *It is the Explanation from the Insurance Company once they have paid the Claim or Group of Claims.*
 
- 1. Doctor's Name
- 2. Disease Code
- 3. Procedure Code for the Treatment Procedure
+## *Claims*
 
-⭐*The **Claim** will be ***submitted*** by the **Hospital** and the Payment will be ***received*** by the Hospital*
+* *Claim* will have the folowing *details*:
 
-⭐Claims are ***Grouped*** together and paid as a single Payment.
+  * Doctor's Name
+  * Disease Code
+  * Procedure Code for the Treatment Procedure
+
+* *The **Claim** will be ***submitted*** by the **Hospital** and the Payment will be ***received*** by the Hospital*
+
+* Claims are ***Grouped*** together and paid as a single Payment.
  We are doing it with ***Batch Processing***
 
-⭐*Remittance* can be of 2 types:
+* *Remittance* can be of 2 types:
 
  1. Paper
  2. `ANSI-835` Electronic Format:
@@ -46,10 +48,10 @@ patient is getting treated for.
 
 ## ***Importing*** to ANSI
 
- 1. We have to get the ANSI-835 Files, validate them and persist those in our Database.
- 2. Each of them are submitting the ANSI-835 files differently.
+* We have to get the ANSI-835 Files, validate them and persist those in our Database.
+* Each of them are submitting the ANSI-835 files differently.
 
-## **ANSI-835** *files structure breakdown*:
+## **ANSI-835** *files structure breakdown*
 
  1. Always a File will start with `ISA`
  2. The file will end with `IEA`
@@ -79,7 +81,7 @@ patient is getting treated for.
 
    These contain `Reason Codes` like WU, L6 which are used to find out the reason.
 
-## **[SUMMARY]**
+## **`SUMMARY`**
 
 ***Batch*** can have *group of **Claims [CLP]***, Each Claim will have *group of **Charges***. Other than Claims, it can also contain **Batch Exceptions [PLB]**.
 
