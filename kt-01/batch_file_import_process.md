@@ -6,9 +6,8 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
 
 ## **EMCRECIEVERID** [*EMC Receiver ID*]
 
-    Each Interface connection will have an ID, this is called as **EMC RECIEVER ID**.
-    
-    This is one of the main Indicator that we have received a *Remittance File*
+* Each Interface connection will have an ID, this is called as **EMC RECIEVER ID**.
+* This is one of the main Indicator that we have received a *Remittance File*
      from the *Payer (Insurance Company.)*
 
 ## **Trigger Point for Import [1.0]**
@@ -32,7 +31,6 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
 ### 1.0 System
 
 * Databases are used as Queues, known as Queue Schema. We have a *DB Table*:
-
   * SIMPLE_QUEUE
 
 * We put an Entry in the Table which will be processed by the **Consumer**, if its successful it will be removed from *SIMPLE_QUEUE* and will be moved to *SIMPLE_QUEUE_WORK*
@@ -85,7 +83,7 @@ For ***Processing*** a Batch File, if we encounter any **ANSI-835** file, then t
       * There will be a **HashMap** created with *key*: *batch*
       * value of *batch* will have another *HashMap* with separate Fields as Keys and
       Value Pairs
-    * **Kick**  can be at **Claim** level or **Charge** level
+    * `Kick`  can be at `Claim` level or `Charge` level
       * **Kick Transformations** are also done in this part
       * some *kick transformations* may also override depending on the Business Loginge required
 
